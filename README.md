@@ -30,7 +30,7 @@ Shortcut | Description
 `Cmd + Opt + W` | Close all panes in tab
 `Cmd + Shift + W` | Close window
 
-## Setup
+## Configuration
 
 ### Git
 
@@ -71,6 +71,37 @@ You want to include the option `IdentitiesOnly yes` to prevent the use of defaul
 - `Preferences` -> `General` -> `Settings`
     - `Load preferences from a custom folder or URL`
     - `Save changes` -> `Manually`
+
+### ZSH
+
+1. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and the required [dependencies](#dependencies).
+2. Copy the contents of `zshrc.zsh` into `~/.zshrc`.
+3. Place `dzmitryf-zsh-kit` into `$ZSH/custom/plugins/`.
+4. Place `dzmitryf.zsh-theme` into `$ZSH/custom/themes/`.
+
+#### Installation in Restricted Environments (Portable Setup)
+
+Use this method if you cannot use `curl`, custom install scripts, package managers, etc, or if you prefer not to modify the host system.
+
+1. Clone [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) into `~/.local/ohmyzsh` (using a custom directory avoids conflicts with the default `~/.oh-my-zsh` location used by the official install script).
+
+2. Install the `oh-my-zsh` plugins listed in [dependencies](#dependencies).
+
+3. Follow steps 2-4 from the regular installation.
+
+4. Update the `ZSH` variable in `~/.zshrc`:
+    ```bash
+    export ZSH="$HOME/.local/ohmyzsh"
+    ```
+
+5. Manually place the tools listed in [dependencies](#dependencies) into `~/.local/bin`.
+
+6. Enable shell integrations for those tools (see their official documentation).
+
+7. Add `~/.local/bin` to your `PATH` in `~/.zshrc`:
+    ```bash
+    export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    ```
 
 ## Dependencies
 
