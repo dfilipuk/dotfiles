@@ -11,7 +11,8 @@
   "files.autoSave": "onFocusChange",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.stickyScroll.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "terminal.integrated.stickyScroll.enabled": false,
   "workbench.colorTheme": "Default Light Modern",
-  "chat.commandCenter.enabled": false,
   "cSpell.language": "en,ru,pl"
 }
