@@ -14,5 +14,6 @@
   "workbench.tree.enableStickyScroll": false,
   "terminal.integrated.stickyScroll.enabled": false,
   "workbench.colorTheme": "Default Light Modern",
-  "cSpell.language": "en,ru,pl"
+  "cSpell.language": "en,ru,pl",
+  "chat.disableAIFeatures": true,
 }
